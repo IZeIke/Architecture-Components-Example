@@ -3,6 +3,7 @@ package com.example.harit.architecturecompetitionexamples.data.Repository
 import androidx.lifecycle.LiveData
 import com.example.harit.architecturecompetitionexamples.data.Entity.User
 import com.example.harit.architecturecompetitionexamples.data.local.UserDao
+import io.reactivex.Single
 
 class UserRepository(val localSource: UserDao) {
 
@@ -10,8 +11,8 @@ class UserRepository(val localSource: UserDao) {
         return localSource.getAllUser()
     }
 
-    fun getUserFromId(id : String) : LiveData<User> {
-        return localSource.getUserFromId(id)
+    fun getUserFromUsername(id : String,password : String) : Single<User> {
+        return localSource.getUserFromId(id,password)
     }
 
     fun insert(user: User) {

@@ -18,8 +18,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.LoginPage.SignupActivity">
-        </activity>
+        <activity android:name=".ui.LoginPage.SignupActivity"></activity>
+
+        <activity android:name=".ui.FeedPage.FeedActivity"></activity>
     </application>
 
 </manifest>

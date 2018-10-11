@@ -23,12 +23,11 @@
         android:hint="username"
         android:layout_gravity="center" />
 
-    <EditText
-        android:id="@+id/passwordEdt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="password"
-        />
+        <EditText
+            android:id="@+id/passwordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="password" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginBtn"
