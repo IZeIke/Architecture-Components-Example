@@ -4,10 +4,12 @@ import androidx.lifecycle.LiveData
 import com.example.harit.architecturecompetitionexamples.data.Entity.User
 import com.example.harit.architecturecompetitionexamples.data.local.UserDao
 import io.reactivex.Single
+import io.reactivex.schedulers.Schedulers
 
 class UserRepository(val localSource: UserDao) {
 
-    fun getAllUser(): LiveData<List<User>> {
+    fun getAllUser(): Single<List<User>> {
+
         return localSource.getAllUser()
     }
 
